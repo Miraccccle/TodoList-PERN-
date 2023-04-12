@@ -1,0 +1,16 @@
+.list-item {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.tick {
+    padding: 10px;
+}
+
+.tick path{
+    fill:none;
+    stroke:#000;
+    stroke-miterlimit:10;
+    stroke-width:32px;
+}

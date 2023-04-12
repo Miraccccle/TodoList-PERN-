@@ -1,0 +1,13 @@
+.list-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
+    background: white;
+    height: 50px;
+}
+
+.list-header .text{
+    color: black;
+    font-size: 30px;
+}

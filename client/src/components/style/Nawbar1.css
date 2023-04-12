@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+:root{
+    --header: rgb(87, 142, 250);
+    --whtext: white;
+    --nawbar: rgb(217, 226, 253);
+    --bacground: rgb(200, 216, 255);
+    --bltext: #777474;
+    --sidebar: #c7c6c6;
+    --chnawbar: rgb(209, 217, 239);
+}
+
+.page{
+    min-height: 1013px;
+    display: flex;
+    float: left;
+    min-width: 4%;
+}
+.nawbar{
+    background: var(--nawbar);
+    width: 290px;
+    min-height: 1013px;
+    height: 100%;
+    overflow: auto;
+    z-index: 100;
+}
+.nawbar.active{
+    width: 0;
+}
+.page .menuUnfoldline{
+    display: none;
+}
+.page .menuUnfoldline.active{
+    display: flex;
+    cursor: pointer;
+    color: var(--bltext);
+    font-size: 23px;
+    margin-top: 29px;
+    margin-left: 24px;
+    z-index: 10;
+    /*transition-delay: 0s, 0.75s;*/
+}
+.menu{
+    background: var(--nawbar);
+    width: 100%;
+    height: 48px;
+    margin: 16px 0 0 0;
+    padding: 0px 24px;
+    display: flex;
+    align-items: center;
+}
+.menu .menufoldline{
+    cursor: pointer;
+    background: var(--nawbar);
+    color: var(--bltext);
+    font-size: 23px;
+}
+.todo{
+    background: var(--nawbar);
+    width: 100%;
+}
+.todo .todayToolbar{
+    background: var(--nawbar);
+    width: 100%;
+    height: 44px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    /* border-left: 2px solid var(--header); */
+    cursor: pointer;
+}
+.TextCr{
+    width: 100px;
+    display: flex;
+    margin-right: 150px;
+}
+.update{
+    display: flex;
+    width: 75px;
+    justify-content: space-around;
+    margin-right: -20px;
+}
+.update .edit{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--bltext);
+    border: none;
+}
+.update .edit:hover{
+    background-color: var(--nawbar);
+}
+.update .delete:hover{
+    background-color: var(--nawbar);
+}
+.update .delete{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--bltext);
+    border: none;
+}
+.todo .todayToolbar .sun{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--bltext);
+}
+.todo .todayToolbar .text{
+    font-size: 19px;
+    background: var(--nawbar);
+    padding-left: 15px;
+}
+.todo .important{
+    background: var(--nawbar);
+    width: 100%;
+    height: 44px;
+    padding: 12px 26px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.todo .important .star{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--bltext);
+}
+.text{
+    font-size: 19px;
+    padding-left: 15px;
+    color: var(--bltext);
+}
+.todo .toolbar{
+    background: var(--nawbar);
+    width: 100%;
+    height: 44px;
+    padding: 12px 26px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.all{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--bltext);
+}
+.folder{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--bltext);
+}
+.sidebar{
+    background: var(--sidebar);
+    height: 1px;
+    margin: 9px 16px;
+}
+.mytodo{
+    background: var(--nawbar);
+    width: 100%;
+}
+.mytodo .createTodo{
+    background: var(--nawbar);
+    width: 100%;
+    height: 44px;
+    padding: 12px 26px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.createTodo .plus{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--header);
+}
+.createTodo .createText{
+    font-size: 19px;
+    background: var(--nawbar);
+    padding-left: 15px;
+    color: var(--header);
+}
+
+/*Setting*/
+.Rheader{
+    font-size: 30px;
+    background: var(--nawbar);
+    padding-left: 5px;
+    color: var(--bltext);
+    font-weight: bold;
+}
+.setBlock{
+    width: 0;
+}
+.setBlock.active{
+    width: 290px;
+    min-height: 1013px;
+    height: 100%;
+    background: var(--nawbar);
+    position: absolute;
+    margin-left: calc(100% - 290px);
+}
+.setBlock.active .setbar{
+    width: 100%;
+    height: 44px;
+    display: flex;
+    padding: 30px 20px;
+    background: var(--nawbar);
+    justify-content: space-between;
+    align-items: center;
+}
+.setBlock.active .setbar .closeCont{
+    background: var(--nawbar);
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.setBlock.active .setbar .closeCont:hover{
+    background: var(--chnawbar);
+    cursor: pointer;
+}
+.setBlock.active .setbar .closeCont .close:hover{
+    background: var(--chnawbar);
+    cursor: pointer;
+}
+.setBlock.active .setbar .closeCont .close{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--bltext);
+
+}
+.Rsidebar{
+    background: var(--sidebar);
+    height: 1px;
+    margin: 0px 16px;
+}
+.Rtoolbar{
+    background: var(--nawbar);
+    width: 100%;
+    height: 44px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Rtext{
+    font-size: 19px;
+    background: var(--nawbar);
+    padding-left: 5px;
+    color: var(--bltext);
+}
+.dark{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--bltext);
+    cursor: pointer;
+}
+.underline{
+    background: var(--nawbar);
+    display: flex;
+    align-items: center;
+}
+.underline a{
+    text-decoration: none;
+}
+.underline a:hover{
+    text-decoration: underline;
+}
+.underline .undertext{
+    background: var(--nawbar);
+    color: var(--bltext);
+    padding-left: 35px;
+    color: var(--header);
+}
+.underline .arrow{
+    background: var(--nawbar);
+    color: var(--bltext);
+    margin-left: 5px;
+    font-size: 14px;
+    color: var(--header);
+    cursor: pointer;
+}
+
+/*Reference*/
+.reference{
+    width: 0;
+}
+.reference.active{
+    width: 290px;
+    max-height: 450px;
+    height: 100%;
+    background: var(--nawbar);
+    position: absolute;
+    margin-left: calc(100% - 290px);
+}
+.reference.active .setbar{
+    width: 100%;
+    height: 44px;
+    display: flex;
+    padding: 30px 20px;
+    background: var(--nawbar);
+    justify-content: space-between;
+    align-items: center;
+}
+.reference.active .setbar .closeCont{
+    background: var(--nawbar);
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reference.active .setbar .closeCont:hover{
+    background: var(--chnawbar);
+    cursor: pointer;
+}
+.reference.active .setbar .closeCont .closedd{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--bltext);
+
+}
+.reference.active .setbar .closeCont .closedd:hover{
+    background: var(--chnawbar);
+    cursor: pointer;
+}
+
+.teamate{
+    background: var(--nawbar);
+}
+.teamate .teamtext{
+    background: var(--nawbar);
+    color: var(--bltext);
+    padding-left: 35px;
+    font-size: 17px;
+}
+
+/*Profile*/
+.proBlock{
+    width: 0;
+}
+.proBlock.active{
+    width: 290px;
+    max-height: 300px;
+    height: 100%;
+    background: var(--nawbar);
+    position: absolute;
+    margin-left: calc(100% - 290px);
+}
+.proBlock.active .setbar{
+    width: 100%;
+    height: 44px;
+    display: flex;
+    padding: 30px 20px;
+    background: var(--nawbar);
+    justify-content: space-between;
+    align-items: center;
+}
+.proBlock.active .setbar .closeCont{
+    background: var(--nawbar);
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.proBlock.active .setbar .closeCont:hover{
+    background: var(--chnawbar);
+    cursor: pointer;
+}
+.proBlock.active .setbar .closeCont .closepp:hover{
+    background: var(--chnawbar);
+    cursor: pointer;
+}
+.proBlock.active .setbar .closeCont .closepp{
+    background: var(--nawbar);
+    font-size: 23px;
+    color: var(--bltext);
+}
+.Ptoolbar{
+    background: var(--nawbar);
+    width: 100%;
+    height: 44px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+}
+.logout{
+    padding-left: 5px;
+    text-decoration: none;
+    background: var(--nawbar);
+    color: var(--bltext);
+    font-size: 19px;
+}
+.logout:hover{
+    text-decoration: underline;
+}
+.out{
+    background: var(--nawbar);
+    color: var(--bltext);
+    font-size: 23px;
+    margin-left: 15px;
+    cursor: pointer;
+}

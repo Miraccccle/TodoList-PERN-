@@ -1,0 +1,72 @@
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    background-color: #578efa;
+    height: 792px;
+}
+
+input {
+    margin: 11px 0;
+    padding: 12px 16px;
+    border: 0;
+    border-bottom: #578efa 1.5px solid;
+}
+input .far {
+    background-color: #ffffff;
+}
+
+.authh {
+    border-radius: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #578efa;
+    color: white;
+    font-family: 'Century Gothic';
+    box-shadow: rgba(0, 0, 0, 0.3) 0 7px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+}
+.authh:hover {
+    background-color: rgb(131, 138, 172);
+}
+.authh:active {
+    background-color: rgb(108, 115, 148);
+    color: white;
+}
+
+.auth-container-box {
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+    margin-top: 100px;
+    margin-bottom: auto;
+    background-color: #ffffff;
+}
+.auth-container-box form h2 {
+    font-family: 'Century Gothic';
+}
+.auth-container-box form {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    padding: 20px;
+}
+
+.auth-options {
+    display: flex;
+}
+
+.auth-options button {
+    width: 50%;
+    border: none;
+    padding: 10px;
+    color: rgb(35, 38, 47);
+ }
+ 
+.user-email {
+    float: right;
+    font-size: 13px;
+    margin: 10px;
+    color: rgb(114, 114, 144);
+}
